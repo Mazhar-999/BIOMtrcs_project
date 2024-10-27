@@ -1,0 +1,11 @@
+numpy
+scipy
+opencv-python
+mediapipe
+tensorflow
+librosa
+sounddevice
+wavio
+joblib
+pydub
+librosa
