@@ -1,0 +1,21 @@
+import os
+import numpy as np
+import soundfile as sf
+
+# Define the path to the directory and the file name
+data_directory = 'data'
+test_audio_file = 'test_sample.wav'
+file_path = os.path.join(data_directory, test_audio_file)
+
+# Create the data directory if it does not exist
+os.makedirs(data_directory, exist_ok=True)
+
+# Create a silent audio signal (1 second of silence)
+sample_rate = 22050  # Common sample rate
+duration = 1  # seconds
+silent_signal = np.zeros(int(sample_rate * duration))
+
+# Save the silent audio file
+sf.write(file_path, silent_signal, sample_rate)
+
+print(f"Saved silent audio file to {file_path}")
